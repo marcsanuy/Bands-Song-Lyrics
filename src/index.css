@@ -6,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightslategray;
 }
 
 
@@ -30,18 +31,13 @@ legend::before {
   content: '';
   width: calc(120% );
   display: block;
-  background-color:#EB6864;
+  background-color:lightslategray;
   height: 40px;
   z-index:-1;
   left: -30px;
   right: -30px;
-  transform: rotate(-1deg);
-  transition: transform .3s ease;
 }
 
-legend:hover::before{
-  transform: rotate(2deg);
-}
 
 form.card{
   border: none;
