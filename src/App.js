@@ -4,14 +4,21 @@ import Formulario from './components/Formulario';
 
 function App() {
 
-  //Utiizar useState con 3 states
+  //Use useState with 3 states
   const [artista, agregarArtista] = useState('');
   const [letra, agregarLetra] = useState([]);
   const [info, agregarInfo] = useState({});
 
+  // Method to consult the song lyrics API
+  const consultarAPILetra = busqueda => {
+    console.log(busqueda);
+  }
+
   return (
     <Fragment>
-        <Formulario />
+        <Formulario 
+          consultarAPILetra={consultarAPILetra}
+        />
 
     </Fragment>
   )
