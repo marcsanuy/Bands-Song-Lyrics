@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 function Formulario({consultarAPILetra}) {
 
     const [busqueda, agregarBusqueda] = useState({
-        artist: '',
-        song: ''
+        artista: '',
+        cancion: ''
     })
 
     //Function for update state inputs
@@ -39,7 +39,7 @@ function Formulario({consultarAPILetra}) {
                                     <input 
                                         type="text" 
                                         className="form-control" 
-                                        name="artist" 
+                                        name="artista" 
                                         placeholder="Artist Name" 
                                         onChange={actualizarState}
                                         required
@@ -52,7 +52,7 @@ function Formulario({consultarAPILetra}) {
                                     <input 
                                         type="text" 
                                         className="form-control" 
-                                        name="song" 
+                                        name="cancion" 
                                         placeholder="Song name" 
                                         onChange={actualizarState}
                                         required
