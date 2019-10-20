@@ -19,10 +19,30 @@ function App() {
     // Consult API
     const resultado = await axios(url);
 
+    // Store Artist searched
+    agregarArtista(artista);
+
     // Store Lyrics in the state
     agregarLetra(resultado.data.lyrics);
 
   }
+
+  // Method to consult the Info API
+  const consultarAPIInfo = async () => {
+    const url = `https://theaudiodb.com/api/v1/json/1/search.php?s=${artista}`;
+    const resultado = await axios(url);
+    
+    agregarInfo(resultado.data.artists[0]);
+    //console.log(info);
+    
+
+  }
+
+  useEffect(
+    () => {
+      consultarAPIInfo();
+    }, [artista]
+  )
 
   return (
     <Fragment>
